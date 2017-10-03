@@ -154,24 +154,6 @@ def generate_random():
     return x, y
 
 
-def setBoxColors(bp,cols, alpha=1):
-    '''
-    Thanks Molly: https://stackoverflow.com/questions/16592222/matplotlib-group-boxplots
-    '''
-    from pylab import plot, show, savefig, xlim, figure, \
-                hold, ylim, legend, boxplot, setp, axes
-    # loop through boxes
-    for i in range(len(bp['boxes'])):
-        setp(bp['boxes'][i], color=cols[i], alpha = alpha)
-        setp(bp['caps'][i*2], color=cols[i], alpha = alpha)
-        setp(bp['caps'][i*2+1], color=cols[i], alpha = alpha)
-        setp(bp['whiskers'][i*2], color=cols[i], alpha = alpha)
-        setp(bp['whiskers'][i*2+1], color=cols[i], alpha = alpha)
-        setp(bp['fliers'][i], markeredgecolor=cols[i], alpha = alpha)
-        setp(bp['medians'][i], color='black', alpha = alpha)
-
-
-
 
 if __name__ == '__main__':
     main()
